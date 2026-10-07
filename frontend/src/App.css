@@ -1,0 +1,50 @@
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f5ff;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 150px;
+  color: #6c3fd1;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+button {
+  background: #6c3fd1;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
