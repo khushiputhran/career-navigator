@@ -1,20 +1,30 @@
-import './App.css';
+import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import EducationChips from './components/EducationChips'
+import HowItWorks from './components/HowItWorks'
+import Features from './components/Features'
+import CTASection from './components/CTASection'
+import Footer from './components/Footer'
+import './App.css'
+
 
 function App() {
+    const [selectedEducation, setSelectedEducation] = useState('B.Tech')
   return (
-    <div>
-      <h1>Career Navigator 🚀</h1>
-
-      <h2>Find a career path that fits you.</h2>
-
-      <p>
-        Explore careers, discover the skills you need,
-        and build a personalized roadmap for your future.
-      </p>
-
-      <button>Get Started</button>
-    </div>
-  );
+    <>
+      <Navbar />
+      <Hero />
+      <EducationChips
+  selectedEducation={selectedEducation}
+  setSelectedEducation={setSelectedEducation}
+      /> 
+      <HowItWorks />
+      <Features />
+      <CTASection />
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App

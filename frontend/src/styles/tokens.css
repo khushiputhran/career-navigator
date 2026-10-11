@@ -1,0 +1,58 @@
+/* Light mode: the default values */
+:root {
+  --bg: #FAF8FF;
+  --surface: #FFFFFF;
+  --text: #1B1535;
+  --muted: #7A7494;
+  --pink: #E94E9B;
+  --purple: #6C5CE7;
+  --border: rgba(108, 92, 231, 0.12);
+  --shadow: 0 8px 24px rgba(108, 92, 231, 0.08);
+  --radius: 18px;
+  --font-heading: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Dark mode: same names, new values.
+   Applies only when <html> has data-theme="dark" */
+[data-theme="dark"] {
+  --bg: #14112A;
+  --surface: #1D1938;
+  --text: #F1EEFF;
+  --muted: #9A94B8;
+  --pink: #F45FAE;
+  --purple: #8B7CF6;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+/* TEMPORARY: only for testing this step, we'll delete it later */
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.demo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 24px;
+  max-width: 360px;
+  margin: 24px auto;
+}
